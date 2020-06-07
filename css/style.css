@@ -1,0 +1,416 @@
+
+/* 顶部栏 logo  */
+.header{
+    height: 84px; 
+    background-color: #D43C33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+.topsvg{
+    height: 25px;
+    width: 142px;
+}
+.download-button{
+    width: 100px;
+    height: 36px;  
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: #d43c33; 
+    text-align: center;
+    line-height: 36px;
+}
+
+
+/* tab栏 */
+.tab{
+    width: 100%;
+    display: flex;
+    position: relative;
+    border: 1px solid rgb(228, 228, 228);
+}
+.tabItem{
+    flex: 1;
+    /* border: 1px solid red; */
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+/* 隐藏input */
+input[type="radio"]{
+    display: none;
+}
+
+/* 屏幕容器 */
+.content{
+    width: 100%;
+    /* height: 100%; */
+    overflow:hidden;
+    
+}
+
+
+.inner{
+    width: 300%;
+    /* height: 100%; */
+    overflow:scroll;
+    transition: margin-left 1s;
+}
+.screen{
+    display: block;
+    width: 33.333%;
+    height: 100%;
+    float: left;
+}
+
+#s1:checked~.tab>label:nth-child(1){
+    color: #D43C33;
+    font-weight: bold;
+    
+}
+#s1:checked~.content>.inner{
+    margin-left: 0%;
+    
+}
+#s1:checked~.content{
+    width: 100%;
+    overflow: hidden;
+}
+/* 下划线 */
+#s1:checked~.tab>label:nth-child(1)::after{
+    content: "";
+    position: absolute;
+    left: 4.5%;
+    bottom: -1px;
+    width: 24%;
+    height: 4px;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background: #dd001b;
+}
+
+
+#s2:checked~.tab>label:nth-child(2){
+    color: #D43C33;
+    font-weight: bold;
+    /* border-bottom: 2px solid #d43c33; */
+}
+#s2:checked~.content>.inner{
+    margin-left: -100%;
+}
+/* 下划线 */
+#s2:checked~.tab>label:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    left: 37.83%;
+    bottom: -1px;
+    width: 24%;
+    height: 4px;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background: #dd001b;
+    
+}
+
+#s3:checked~.tab>label:nth-child(3){
+    color: #D43C33;
+    font-weight: bold;
+    /* border-bottom: 2px solid #d43c33; */
+}
+#s3:checked~.content>.inner{
+    margin-left: -200%;
+}
+/* 下划线 */
+#s3:checked~.tab>label:nth-child(3)::after{
+    content: "";
+    position: absolute;
+    left: 71.16%;
+    bottom: -1px;
+    width: 24%;
+    height: 4px;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background: #dd001b;
+    
+}
+
+/* 推荐歌单 */
+
+.rec-song
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.rec-song>a
+{
+    width: 32.5%;
+    text-decoration: none;
+    color:#333 ;
+    display: block;
+    
+}
+.song-item{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.song-item>img{
+    width: 100%;
+}
+.song-item>p
+{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 4px 2px 0 4px;
+    min-height: 30px;
+    line-height: 1.2;
+    font-size: 13px;
+}
+
+
+
+.title
+{
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    
+}
+/* 伪类 */
+.title>p::before{
+    content: "";
+    width: 2px;
+    height: 16px;
+    display: inline-block;
+    background: #D43C33;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+/********************* 最新音乐 +热歌榜样式******************/
+.hotSong , .newSong{
+    height: 100%;
+    overflow: hidden; 
+}
+.newSong a, .hotSong a{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 5px;
+}
+
+.newSong li 
+{
+    /* display: inline-block; */
+    padding-left: 10px;
+
+
+}
+.newSong li .song-title-container , .hotSong li .song-title-container
+{
+    display: flex;
+    width: 90%;
+    color: #333;
+    justify-content: flex-start;
+}
+
+
+
+
+.song-title p{
+    width: 100%;
+    color: #333;
+    
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+.song-des{
+    flex: 1;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: gray;
+}
+.song-des p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+.play-icon{
+    width: 22px;
+    height: 22px;
+    background: url(/img/x2.png) no-repeat;
+    background-size: 166px 97px;
+    background-position: -24px 0;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.singer{
+    font-size: 12px;
+    color: gray;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+.sqicon{
+    background: url(/img/x2.png);
+    background-size: 166px 97px;
+    width: 12px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/******************** 最新音乐 +热歌榜样式 *******************/
+
+/* 热歌榜 */
+.hoptop{
+    width: 100%;
+    height: 125px;
+    background: url(/img/hot_music_bg.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+   
+}
+.hoptopImg{
+    width: 142px;
+    height: 67px;
+    background: url(/img/x2.png) no-repeat;
+    background-size: 166px 97px;
+    background-position: -24px -30px;
+    box-sizing: border-box;
+    position: absolute;
+    align-items: center;
+    left: 20px;
+    top: 20px;
+    /* transform: translate(-50%,-50%); */
+
+}
+
+/* li  的布局与最新音乐相同 */
+
+.hotSong>ul{
+    margin-top: 10px;
+}
+
+.num{
+    width: 40px;
+    position: absolute;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    /* padding-left: 10px; */
+    display: flex;
+   
+}
+
+.hotSong li 
+{
+    /* display: inline-block; */
+    margin-left: 40px;
+    
+
+}
+
+
+
+
+/* 搜索界面样式 */
+.search-bar{
+    height: 60px;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.search-bar>input[type="text"]{
+    height: 30px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background:  rgb(233, 233, 233);
+    padding: 0 10px;
+}
+
+.search-rem, .search-res{
+    display: none;
+}
+
+
+.search-hot{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px 10px 10px;
+}
+.search-def>h2{
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 0 0 15px;
+
+}
+.search-hot>span{
+    padding: 4px 8px;
+    font-size: 13px;
+    border: 1px solid rgb(230, 230, 230);
+    margin: 0 8px 10px 0;
+    border-radius: 35px;
+    display: block;
+}
+
+.search-list>li{
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    font-size: 13px;
+    color: #333;
+    padding:0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* 搜索结果 */
+
+.search-res>ol>li{
+    height: 66px;
+    border-bottom: 1px solid bisque;
+    display: flex;
+    align-items: center;
+}
+
+
+.search-res>ol>li>img{
+    height: 50px;
+    width: 50px;
+}
+
+.search-res>ol>li>p{
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 15px;
+    font-size: 16px;
+}

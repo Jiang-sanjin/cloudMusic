@@ -1,0 +1,245 @@
+header{
+    width:100%;
+    height: 174px;
+    
+    
+    position: relative;
+}
+.info{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    justify-content: space-between;
+    padding: 20px 5px;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:990;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg>img{
+    width: 120%;
+    filter: blur(50px);
+}
+.songImg{
+    margin-left: 5px;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.songImg>img{
+    width: 100%;
+    max-width: 174px;
+}
+.songTxt{
+    margin: 5px 0 0 15px ;
+    flex: 3;
+}
+.songTxt>h2{
+    color: white;
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.user{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user>p{
+    margin-left: 2px;
+    font-size: 14px;
+    flex: 1;
+    color: white;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.avatar{
+    display: inline-block;
+    /* vertical-align: middle; */
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.avatar>img{
+    width: 100%;
+}
+
+
+
+
+/* 歌单介绍 */
+.intro{
+    height: 130px;
+    
+    font-size:12px ;
+   
+    
+    color: #333;
+    position: relative;
+   
+   
+}
+.inner{
+    width: 100%;
+    height: 115px;
+    padding: 10px;
+    overflow: hidden;
+}
+.intro_title{
+    
+
+    font-size: 14px;
+    padding-top: 5px;
+    height: 22px;
+    margin-bottom: 12px;
+    
+}
+.intro_title>span{
+    
+    font-size: 12px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 3px 8px;
+    margin-right: 5px;
+}
+
+.intro_txt{
+    color: gray;
+    font-size: 14px;
+    line-height: 19px;
+    
+}
+.intro_txt>icon{
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    color: gray;
+
+    /* transition: 过度   过度什么属性，用几秒时间; */
+    /* animation: roll-res 0.4s linear; */
+    transition: transfrom 0.4s
+
+}
+
+.up{
+    transform: rotate(180deg);
+}
+.down{
+    transform: rotate(0deg);
+}
+
+
+/* 歌单列表 */
+
+.song-list{
+    /* height: 100%; */
+    overflow: hidden; 
+}
+.song-list>h3{
+    height: 23px;
+    line-height: 23px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #666;
+    background-color: #eeeff0;
+}
+
+.play-list>ul{
+    margin-top: 5px;
+}
+
+.play-list a{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 5px;
+}
+.num{
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+ 
+    display: flex;
+   
+}
+.play-list li{
+    margin-left: 40px;
+    
+}
+
+.song-title p{
+    width: 80%;
+    color: #333;
+    
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+.song-des{
+    flex: 1;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: gray;
+}
+.song-des p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+.singer{
+    width: 80%;
+}
+
+.play-icon{
+    width: 22px;
+    height: 22px;
+    background: url(/img/x2.png) no-repeat;
+    background-size: 166px 97px;
+    background-position: -24px 0;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.singer{
+    font-size: 12px;
+    color: gray;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+.sqicon{
+    background: url(/img/x2.png);
+    background-size: 166px 97px;
+    width: 12px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
