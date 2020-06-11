@@ -1,3 +1,5 @@
+//最新音乐
+
 fetch("http://localhost:3000/personalized/newsong",{
     method:"get",
     mode:"cors",
@@ -16,12 +18,8 @@ fetch("http://localhost:3000/personalized/newsong",{
                     <div class="play-icon"></div>
                     
                     <div class="song-title-container">
-                        <div class="song-title">
-                            <p>${data.result[i].name}</p>
-                        </div>
-                        <div class="song-des">
-                            <p>${des}</p>
-                        </div>
+                        ${data.result[i].name}
+                        <p class="song-des"> ${des} </p>
                     </div>
                     
                     <div class="singer">
@@ -35,5 +33,5 @@ fetch("http://localhost:3000/personalized/newsong",{
     }
     let box=document.querySelector(".newSong>ul")
     box.innerHTML=str
-
+    changeHeight($(".inner>.screen:nth-child(1)"),$(".content") )
 })

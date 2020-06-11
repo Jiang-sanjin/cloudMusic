@@ -23,12 +23,8 @@ fetch("http://localhost:3000/top/list?idx=1",{
                     <div class="play-icon"></div>
                     
                     <div class="song-title-container">
-                        <div class="song-title">
-                            <p>${ data.playlist.tracks[i].name}</p>
-                        </div>
-                        <div class="song-des">
-                            <p>${des}</p>
-                        </div>
+                        ${ data.playlist.tracks[i].name}
+                        <p class="song-des">${des}</p>
                     </div>
                     
                     <div class="singer">
