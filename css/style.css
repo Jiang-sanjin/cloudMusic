@@ -402,8 +402,8 @@ input[type="radio"]{
 
 
 .search-res>ol>li>img{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 .search-res>ol>li>p{

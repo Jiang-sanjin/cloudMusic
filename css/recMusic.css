@@ -150,7 +150,7 @@ header{
     /* height: 100%; */
     overflow: hidden; 
 }
-.song-list>h3{
+.song-list>h3, .hot-comment>h3{
     height: 23px;
     line-height: 23px;
     padding: 0 10px;
@@ -167,9 +167,9 @@ header{
     width: 100%;
     display: inline-block;
     position: relative;
-    height: 48px;
+    height: 55px;
     border-bottom: 1px solid #efefef;
-    margin-bottom: 5px;
+    padding-bottom: 10px;
 }
 .num{
     position: absolute;
@@ -184,13 +184,12 @@ header{
 }
 .play-list li{
     margin-left: 40px;
-    
 }
 
 .song-title p{
     width: 80%;
     color: #333;
-    
+    padding-top: 10px;
     margin-right: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -242,4 +241,97 @@ header{
     height: 8px;
     display: inline-block;
     vertical-align: middle;
+}
+
+
+
+/* 评论 */
+.hot-comment ul li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom: 1px solid gainsboro;
+}
+.user{
+    display: flex;
+    height: 34px;
+    width: 100%;
+}
+
+.left-img{
+    width: 40px;
+    /* background: pink; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-icon{
+    width: 38px;
+    /* background: greenyellow; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-info{
+    padding-top: 5px;
+    padding-left: 5px;
+    line-height: 12px;
+    flex: 1;
+    /* background: indianred; */
+    height: 100%;
+    color: #666;
+}
+.user-info p{
+    font-size: 15px;
+    
+}
+.comment{
+    width: 100%;
+    
+    /* background: indigo; */
+}
+.comment>p{
+    padding-left: 45px;
+    padding-right: 10px;
+    padding-top: 6px;
+    color: #333;
+    font-size: 15px;
+}
+.comment>span{
+    margin-top: 5px;
+    width: 260px;
+    padding: 8px;
+    border: 1px solid silver;
+    display: block;
+    margin-left: 45px;
+    font-size: 15px;
+    color: gray;
+    line-height: 22px;
+}
+.head{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.head>img{
+    width: 100%;
+}
+.u-svg-unzancmt{
+    width: 14px;
+    height: 14px;
+    margin-left: 3px;
+}
+.right-icon>span{
+    font-size: 10px;
+    color: gray;
+}
+.user-info>p{
+    font-size: 12px;
+}
+.user-info>span{
+    font-size: 10px;
+    color: gray;
 }

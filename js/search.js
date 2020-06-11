@@ -8,13 +8,14 @@ let searchInput = document.querySelector(".search-bar>input")
 // }
 searchHot()
 getInfo()
-// onfocus表示有焦点
+// onfocus表示有焦点search
 searchInput.onfocus = function(){
     console.log("有焦点")
-    searchInput.onkeyup = function(e){ 
+    searchInput.onkeyup = function (e){ 
         // console.log("键盘")
         if( searchInput.value==""){
             // 输入框为空展示默认页面
+            // showContainer 切换页面
             showContainer(document.querySelector(".search-def"))
             
         }
