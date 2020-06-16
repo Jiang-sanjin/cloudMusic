@@ -1,0 +1,56 @@
+.login-page{
+
+    background: #DB2C1F;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bg{
+    margin-top: 150px;
+}
+
+.bg>img{
+    height: 55px;
+    width: 55px;
+}
+.main{
+    margin-top: 25PX;
+    width: 220px;
+    height: 200px;
+    background-color: ivory;
+    border-radius: 20px;
+}
+.register, .password{
+    margin-top:20px ;
+    padding-top: 10px;
+    height: 36px;  
+    border: none;
+    color: #d43c33; 
+    text-align: center;
+    line-height: 36px;
+    font-size: 15px;
+}
+.register>input , .password>input{
+    padding: 0 10px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background:  rgb(233, 233, 233);
+    border-radius: 10px;
+}
+.btn{
+    margin: 40px 60px;
+
+    width: 90px;
+    height: 30px;  
+    border-radius: 20px;
+    border: none;
+    background-color:  #d43c33;
+    color:white; 
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+}

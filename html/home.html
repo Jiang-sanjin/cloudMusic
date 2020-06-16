@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div class="header">
+        <div class="user">
+            <div class="avatar">
+                <img src="" alt="">
+            </div>
+            <div class="name"></div>
+            <div class="signature"></div>
+        </div>
+        <div class="userTxt"> 
+            <p></p>
+        </div>
+        <div class="bg">
+             <img src="" alt="">
+        </div>
+       
+    </div>
+
+    <!-- 隐藏input -->
+    <input type="radio" name="s" id="s1" checked>
+    <input type="radio" name="s" id="s2">
+    <input type="radio" name="s" id="s3">
+    <div class="tab">
+        <!-- label标签可以绑定input   for=" " -->
+        <label for="s1" class="tabItem" id="tabItem1">主页</label>
+        <label for="s2" class="tabItem" id="tabItem2">每日推荐</label>
+        <label for="s3" class="tabItem" id="tabItem3">mv</label>
+    </div>
+    <div class="content">
+        <!-- content只有一个屏幕大小 -->
+        <div class="inner">
+            <!-- inner有3个屏幕大小 -->
+            <div class="screen" >
+                <div class="main">   
+                    <ul>   
+
+                    </ul>
+                </div> 
+
+            </div>
+            <!-- 每日推荐 -->
+            <div class="screen" >
+                <div class="song-list">
+                    <div class="play-list">
+                        <ul></ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="screen" >
+                <div class="title">
+                    <p>网易出品mv</p>
+                </div>
+                <div class="wy-mv"></div>
+
+                <div class="title">
+                    <p>推荐mv</p>
+                </div>
+                <div class="rec-mv"></div>
+
+                <div class="title">
+                <p>最新mv</p>
+                </div>
+                <div class="mv"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/js/showContainer.js"></script>
+<script src="../js/changeHeight.js"></script>
+<script src="../node_modules/axios/dist/axios.js"></script>
+<script src="../js/getElement.js"></script>
+<script src="../js/home.js"></script>
+</html>

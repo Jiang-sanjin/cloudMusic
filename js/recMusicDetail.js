@@ -72,17 +72,20 @@ axios.all( [ getSongDetail() , SongComment() ] )
 
         // 正侧表达      g表示全局替换      \N是回车符号
         let reg = /\n/g
-        console.log(reg)
-        let str2 = songList.description.replace(reg,"<br>")
-        console.log(str2)
         let str = ``
-        for( let i=0; i<songList.tags.length; i++){
-            str += `<span>${songList.tags[i]}</span>`
+        console.log(songList)
+        if(songList.description!=null){
+            let str2 = songList.description.replace(reg,"<br>")
+        
+            for( let i=0; i<songList.tags.length; i++){
+                str += `<span>${songList.tags[i]}</span>`
+            }
+            $(".intro_title").innerHTML = `标签：`+str 
+
+            introTxt.innerHTML = `简介：` + `<br>` + str2
         }
-        $(".intro_title").innerHTML = `标签：`+str 
-
-        introTxt.innerHTML = `简介：` + `<br>` + str2
-
+        
+        // 歌单
         str = ``
         for( let i=0; i<songList.tracks.length; i++){
             let tmp = i+1
@@ -122,6 +125,7 @@ axios.all( [ getSongDetail() , SongComment() ] )
 
         // 热门评论
         let hotStr = ``
+
         SongCommentData.data.hotComments.forEach( (value,index,arr)=>{
             let repliedStr  = ``
             if( value.beReplied.length!=0 ){

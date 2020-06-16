@@ -62,7 +62,6 @@ axios.all( [ getMusicURL(), ablumImg(), getLyric() ]  )
     //歌词设置
     title.innerHTML = ablumImgData.data.songs[0].name
     
-
     // 音乐设置
     musicAudio.setAttribute("src",musicUrlData.data.data[0].url)
 

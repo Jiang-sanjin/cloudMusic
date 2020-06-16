@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
 </head>
 <body>
-    
+    <div class="login-page">
+        <div class="bg">
+            <img src="../img/logo.svg" alt="">
+        </div>
+        <div class="main">
+            <!-- 手机号登陆 -->
+            <div class="register">
+                手机号: <input type="text" placeholder="">
+            </div>
+            <div class="password">
+                密  码： <input type="password" placeholder="">
+            </div>
+
+            <div class="mian-login">
+                    <div class="btn" onclick="login()">登  录</div>
+            </div>
+
+        </div>
+
+
+    </div>
+
 </body>
+<script src="../js/getElement.js"></script>
+<script src="../js/login.js"></script>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mv</title>
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/mv.css">
+</head>
+<body>
+    <div class="top">
+        <div class="header">
+            <img src="../img/logo.svg" alt="">
+            <p>name</p>
+        </div>
+        <div class="vedio">
+            <video class="mv" controls="controls">
+                <!-- <source src="movie.mp4" type="video/mp4" /> -->
+            </video>
+        </div>
+        <div class="bg">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="set-comment">
+        <textarea class="comment-box"></textarea>
+        <div class="btn" onclick="set()">发送</div>
+    </div>
+
+    <div class="hot-comment">
+        <h3>热门评论</h3>
+        <ul>
+
+        </ul>
+    </div>
+    <div class="mv-comment">
+        <h3>最新评论</h3>
+        <ul>
+
+        </ul>
+    </div>
+
+    
+</body>
+<script src="../js/changeHeight.js"></script>
+<script src="../node_modules/axios/dist/axios.js"></script>
+<script src="../js/getElement.js"></script>
+<script src="../js/mv.js"></script>
+</html>

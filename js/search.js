@@ -28,23 +28,7 @@ searchInput.onfocus = function(){
                 // 回车键显示的界面
                 showContainer(document.querySelector(".search-res"))
 
-
-                 // 离线存储以key:value形式
-                // let arr = []
-                // arr.push(searchInput.value)
-                // localStorage.setItem("singerName",JSON.stringify(arr))
-
-                // 先从离线存储里面取出数据
-                // 在这个数据之上push
-                // 离线存取关键:整存整取
-                
-               
-                
-                
-                
-               
                 getInfo()
-
                 
                 //发送请求  渲染
                 axios_request()
@@ -86,6 +70,15 @@ function searchHot(){
 
 // 渲染存储
 function getInfo(){
+                 // 离线存储以key:value形式
+                // let arr = []
+                // arr.push(searchInput.value)
+                // localStorage.setItem("singerName",JSON.stringify(arr))
+
+                // 先从离线存储里面取出数据
+                // 在这个数据之上push
+                // 离线存取关键:整存整取
+                
     if( !arr.includes(searchInput.value) ){    
         //判断是否存在
         arr.push(searchInput.value) 

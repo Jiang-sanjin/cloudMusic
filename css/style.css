@@ -13,14 +13,14 @@
     width: 142px;
 }
 .login-button{
-    width: 55px;
-    height: 30px;  
+    width: 60px;
+    height: 36px;  
     border-radius: 20px;
     border: none;
     background-color: white;
     color: #d43c33; 
     text-align: center;
-    line-height: 30px;
+    line-height: 36px;
     font-size: 15px;
 }
 
